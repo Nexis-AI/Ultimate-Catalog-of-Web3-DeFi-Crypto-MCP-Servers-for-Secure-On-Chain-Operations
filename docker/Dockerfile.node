@@ -1,0 +1,29 @@
+# Generic Node.js MCP Runner
+# Usage: docker build -t mcp-node-runner -f Dockerfile.node .
+#        docker run -e REPO_URL="..." mcp-node-runner
+
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install git and dependencies
+RUN apk add --no-cache git python3 make g++
+
+# Create entrypoint script
+RUN echo '#!/bin/sh' > /entrypoint.sh && \
+    echo 'if [ -z "$REPO_URL" ]; then echo "Error: REPO_URL env var is required"; exit 1; fi' >> /entrypoint.sh && \
+    echo 'echo "Cloning $REPO_URL..."' >> /entrypoint.sh && \
+    echo 'git clone "$REPO_URL" . || echo "Repo already exists or clone failed"' >> /entrypoint.sh && \
+    echo 'if [ -f "package.json" ]; then' >> /entrypoint.sh && \
+    echo '  echo "Installing dependencies..."' >> /entrypoint.sh && \
+    echo '  npm install --production' >> /entrypoint.sh && \
+    echo '  echo "Starting server..."' >> /entrypoint.sh && \
+    echo '  # Try standard start commands' >> /entrypoint.sh && \
+    echo '  npm start || node index.js || node dist/index.js' >> /entrypoint.sh && \
+    echo 'else' >> /entrypoint.sh && \
+    echo '  echo "No package.json found!"' >> /entrypoint.sh && \
+    echo '  exit 1' >> /entrypoint.sh && \
+    echo 'fi' >> /entrypoint.sh && \
+    chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]

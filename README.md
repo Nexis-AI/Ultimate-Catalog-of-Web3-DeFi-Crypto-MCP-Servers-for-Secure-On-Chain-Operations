@@ -32,6 +32,36 @@ To add your own MCP server to this catalog, please see [CONTRIBUTING.md](./CONTR
 | **Infra**    | Node providers, RPCs, Indexers                          |
 | **Security** | Smart contract auditors, Token sniffers                 |
 
+## 🐳 Docker Deployment
+
+We provide **Generic Runners** to containerize any Git-based MCP server instantly.
+
+1.  Navigate to `docker/`.
+2.  Edit `docker-compose.yml` to uncomment the servers you want.
+3.  Run:
+    ```bash
+    docker-compose up -d --build
+    ```
+
+## 🔐 Secure Wallet Integration (Human-in-the-Loop)
+
+**CRITICAL**: Do NOT use your main wallet's private key in `env` variables for production agents.
+
+### The "Transaction Builder" Pattern
+
+To use these servers with your **In-App Wallet** (e.g., Nexis Wallet, Metamask, Phantom):
+
+1.  **Configure Servers as "Builders"**: Most trading servers (like `jupiter-mcp`) support a mode where they return an **Unsigned Transaction** object instead of executing the trade.
+2.  **Handling the Response**:
+    - **Agent**: Calls `swap_jupiter(token: "SOL", amount: 1)`.
+    - **MCP Server**: Returns `{ "type": "transaction", "data": "<base64_unsigned_tx>", "network": "solana" }`.
+    - **Nex-T1 App**: Intercepts this JSON.
+    - **UI**: Pops up a "Sign Transaction" modal for the user.
+    - **User**: Approves via In-App Wallet.
+    - **App**: Broadcasts the signed tx.
+
+This ensures **User Custody** is never compromised. The Agent _intends_, the User _approves_.
+
 ## 🛡️ Verification
 
 All servers listed here undergo a basic verification process to ensure they conform to the MCP standard and do not contain malicious defaults. However, **ALWAYS review the code and permissions** of any server you grant access to your wallet.

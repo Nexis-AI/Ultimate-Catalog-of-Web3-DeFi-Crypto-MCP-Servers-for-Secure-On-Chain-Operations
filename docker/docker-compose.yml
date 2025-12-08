@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------
+  # Node.js Based Servers (Jupiter, Uniswap, etc.)
+  # ---------------------------------------------------------
+  jupiter-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    environment:
+      - REPO_URL=https://github.com/collinsezedike/jupiter-mcp
+      # In "Transaction Builder" mode, we don't provide a PRIVATE_KEY
+      # The server should just return the transaction object
+      - RPC_URL=${SOLANA_RPC_URL}
+    restart: always
+
+  uniswap-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    environment:
+      - REPO_URL=https://github.com/kukapay/uniswap-trader-mcp
+      - RPC_URL=${ETH_RPC_URL}
+    restart: always
+
+  # ---------------------------------------------------------
+  # Python Based Servers (Analysis, Data)
+  # ---------------------------------------------------------
+  messari-mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    environment:
+      - REPO_URL=https://github.com/messari/messari-python-sdk
+      - MESSARI_API_KEY=${MESSARI_KEY}
+    restart: always
