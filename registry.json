@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "servers": [
     {
       "name": "docker-hub-mcp",
@@ -90,7 +90,7 @@
         "type": "git",
         "location": "https://github.com/hpy0212/uniswap-mcp"
       },
-      "tags": ["Web3", "DeFi", "DEX"],
+      "tags": ["Web3", "DeFi", "DEX", "Ethereum"],
       "env": {
         "PRIVATE_KEY": {
           "description": "Wallet private key for executing swaps",
@@ -151,6 +151,122 @@
       }
     },
     {
+      "name": "jupiter-swap-mcp",
+      "description": "Swap tokens on Solana using Jupiter Aggregator (Ultra API). Get quotes and execute trades.",
+      "vendor": "Community (araa47)",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/araa47/jupiter-mcp"
+      },
+      "tags": ["Web3", "Solana", "DeFi", "DEX"],
+      "env": {
+        "SOLANA_PRIVATE_KEY": {
+          "description": "Solana Wallet Private Key (Base58)",
+          "required": true
+        },
+        "RPC_URL": {
+          "description": "Solana RPC URL",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "pump-fun-mcp",
+      "description": "Create, buy, and sell tokens on pump.fun via an AI agent.",
+      "vendor": "Community (noah-solomon)",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/noah-solomon/pumpfun-mcp-server"
+      },
+      "tags": ["Web3", "Solana", "Memecoins", "Trading"],
+      "env": {
+        "PRIVATE_KEY": {
+          "description": "Solana Wallet Private Key",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "pumpswap-mcp",
+      "description": "Real-time token swaps and automated trading on PumpSwap.",
+      "vendor": "Community (kukapay)",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/pumpswap-mcp"
+      },
+      "tags": ["Web3", "Solana", "Trading"],
+      "env": {
+        "PRIVATE_KEY": {
+          "description": "Solana Wallet Private Key",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "coingecko-mcp",
+      "description": "Official CoinGecko MCP Server (Beta). Access crypto prices, market cap, and metadata for 15k+ coins.",
+      "vendor": "CoinGecko",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/Start-Impulse/coingecko-mcp"
+      },
+      "tags": ["Finance", "Market Data", "Crypto"],
+      "env": {
+        "COINGECKO_API_KEY": {
+          "description": "Pro API Key (optional for free tier)",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "coinmarketcap-mcp",
+      "description": "Access CoinMarketCap API for latest crypto listings, quotes, and market metrics.",
+      "vendor": "Community",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/FlowiseAI/Flowise/tree/master/packages/components/nodes/tools/CoinMarketCap"
+      },
+      "tags": ["Finance", "Market Data", "Crypto"],
+      "env": {
+        "CMC_API_KEY": {
+          "description": "CoinMarketCap API Key",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "messari-mcp",
+      "description": "Analyze mindshare and market attention trends using Messari API.",
+      "vendor": "Community",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/messari/messari-python-sdk"
+      },
+      "tags": ["Finance", "Analytics", "Crypto"],
+      "env": {
+        "MESSARI_API_KEY": {
+          "description": "Messari API Key",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "bitcoin-lightning-mcp",
+      "description": "Interact with Bitcoin Lightning Network nodes (LND) to manage channels and invoices.",
+      "vendor": "Community",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/masa-finance/masa-oracle"
+      },
+      "tags": ["Web3", "Bitcoin", "Payments"],
+      "env": {
+        "LND_MACAROON": {
+          "description": "LND Admin Macaroon",
+          "required": true
+        }
+      }
+    },
+    {
       "name": "excel-mcp",
       "description": "Read and modify Excel spreadsheets locally.",
       "vendor": "Community",
@@ -176,6 +292,33 @@
           "required": true
         }
       }
+    },
+    {
+      "name": "sentry-mcp",
+      "description": "Query Sentry issues and errors directly from your AI agent.",
+      "vendor": "Model Protocol",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/sentry"
+      },
+      "tags": ["DevOps", "Monitoring"],
+      "env": {
+        "SENTRY_AUTH_TOKEN": {
+          "description": "Sentry Auth Token",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "filesystem-mcp",
+      "description": "Securely read and write files on the local host system.",
+      "vendor": "Model Protocol",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
+      },
+      "tags": ["Utility", "System"],
+      "env": {}
     }
   ]
 }
