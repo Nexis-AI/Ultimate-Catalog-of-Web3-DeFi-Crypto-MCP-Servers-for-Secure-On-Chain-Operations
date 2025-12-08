@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MCP Server Registry",
+  "description": "Registry of Model Context Protocol (MCP) Servers for Web3, DeFi, and Crypto Operations",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Version of the registry specification",
+      "default": "1.0.0"
+    },
+    "servers": {
+      "type": "array",
+      "description": "List of registered MCP servers",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "vendor", "source", "tags"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Unique identifier/name of the MCP server, e.g., 'uniswap-mcp'"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the server's capabilities"
+          },
+          "vendor": {
+            "type": "string",
+            "description": "Name of the organization or individual maintaining this server"
+          },
+          "source": {
+            "type": "object",
+            "required": ["type", "location"],
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["docker", "git", "http"],
+                "description": "Distribution method"
+              },
+              "location": {
+                "type": "string",
+                "description": "Docker image tag (e.g., 'mcp/uniswap:latest') or Repository URL"
+              },
+              "command": {
+                "type": "string",
+                "description": "Optional command to run (mostly for local dev/git sources)"
+              }
+            }
+          },
+          "env": {
+            "type": "object",
+            "description": "Required environment variables (keys only, no secrets)",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "description": { "type": "string" },
+                "required": { "type": "boolean", "default": true }
+              }
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Categories like 'DeFi', 'Wallet', 'Analytics'"
+          }
+        }
+      }
+    }
+  },
+  "required": ["version", "servers"]
+}

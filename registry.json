@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "servers": [
+    {
+      "name": "docker-hub-mcp",
+      "description": "Official Docker Hub MCP Server for searching and managing container images.",
+      "vendor": "Docker Inc.",
+      "source": {
+        "type": "docker",
+        "location": "docker/mcp-server-hub:latest"
+      },
+      "tags": ["DevOps", "Infrastructure", "Docker"],
+      "env": {
+        "DOCKER_PAT": {
+          "description": "Personal Access Token for private repos",
+          "required": false
+        }
+      }
+    }
+  ]
+}
