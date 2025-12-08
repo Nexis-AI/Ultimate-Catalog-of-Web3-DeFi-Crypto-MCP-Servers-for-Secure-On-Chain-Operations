@@ -16,6 +16,166 @@
           "required": false
         }
       }
+    },
+    {
+      "name": "git-mcp",
+      "description": "Official GitHub MCP Server for repository management, PRs, and issues.",
+      "vendor": "Docker Inc.",
+      "source": {
+        "type": "docker",
+        "location": "docker/mcp-server-git:latest"
+      },
+      "tags": ["DevOps", "Productivity", "GitHub"],
+      "env": {
+        "GITHUB_TOKEN": {
+          "description": "GitHub Personal Access Token",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "postgres-mcp",
+      "description": "Official PostgreSQL MCP Server for database querying and schema inspection.",
+      "vendor": "Model Protocol",
+      "source": {
+        "type": "docker",
+        "location": "docker/mcp-server-postgres:latest"
+      },
+      "tags": ["Database", "Productivity", "SQL"],
+      "env": {
+        "POSTGRES_URL": {
+          "description": "Connection string (postgres://user:pass@host:5432/db)",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "sequential-thinking",
+      "description": "A tool to facilitate dynamic and reflective problem-solving through thoughts. Enables Chain-of-Thought reasoning.",
+      "vendor": "Model Protocol",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequential-thinking"
+      },
+      "tags": ["Utility", "Reasoning", "AI"],
+      "env": {}
+    },
+    {
+      "name": "time-mcp",
+      "description": "Provides current time and timezone utilities to AI agents.",
+      "vendor": "Model Protocol",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/time"
+      },
+      "tags": ["Utility", "Time"],
+      "env": {}
+    },
+    {
+      "name": "yahoo-finance-mcp",
+      "description": "Fetch real-time stock prices, historical data, and market news via Yahoo Finance.",
+      "vendor": "Community (narumi)",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/narumi/yfinance-mcp"
+      },
+      "tags": ["Finance", "Market Data", "Stocks"],
+      "env": {}
+    },
+    {
+      "name": "uniswap-mcp",
+      "description": "Interact with Uniswap V3: Swap tokens and check pool stats on Ethereum/Base/Optimism.",
+      "vendor": "Community (hpy0212)",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/hpy0212/uniswap-mcp"
+      },
+      "tags": ["Web3", "DeFi", "DEX"],
+      "env": {
+        "PRIVATE_KEY": {
+          "description": "Wallet private key for executing swaps",
+          "required": true
+        },
+        "RPC_URL": {
+          "description": "Ethereum/L2 RPC Endpoint",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "defi-trading-mcp",
+      "description": "Autonomous crypto trading agent for spot trading and market analysis.",
+      "vendor": "Community (edkdev)",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/edkdev/defi-trading-mcp"
+      },
+      "tags": ["Web3", "DeFi", "Trading"],
+      "env": {
+        "USER_PRIVATE_KEY": {
+          "description": "Wallet private key",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "evm-wallet-mcp",
+      "description": "EVM Wallet management: Check balances, sign transactions, and manage assets.",
+      "vendor": "dcSpark",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/dcSpark/mcp-cryptowallet-evm"
+      },
+      "tags": ["Web3", "Wallet", "EVM"],
+      "env": {
+        "PRIVATE_KEY": {
+          "description": "Wallet private key",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "solana-helius-mcp",
+      "description": "Interact with Solana blockchain via Helius API: Get balances, transactions, and parse instructions.",
+      "vendor": "Helius",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/helius-labs/helius-mcp"
+      },
+      "tags": ["Web3", "Solana", "Infrastructure"],
+      "env": {
+        "HELIUS_API_KEY": {
+          "description": "Helius RPC/API Key",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "excel-mcp",
+      "description": "Read and modify Excel spreadsheets locally.",
+      "vendor": "Community",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/mcp-excel/mcp-excel"
+      },
+      "tags": ["Productivity", "Office", "Data"],
+      "env": {}
+    },
+    {
+      "name": "google-drive-mcp",
+      "description": "Access files and manage documents in Google Drive.",
+      "vendor": "Model Protocol",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive"
+      },
+      "tags": ["Productivity", "Cloud", "Google"],
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": {
+          "description": "Path to Google Service Account JSON",
+          "required": true
+        }
+      }
     }
   ]
 }
