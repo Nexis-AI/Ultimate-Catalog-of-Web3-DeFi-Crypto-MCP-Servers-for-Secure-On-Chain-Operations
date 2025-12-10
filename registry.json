@@ -5,23 +5,42 @@
       "name": "docker-hub-mcp",
       "description": "Official Docker Hub MCP Server for searching and managing container images.",
       "vendor": "Docker Inc.",
-      "source": { "type": "docker", "location": "docker/mcp-server-hub:latest" },
+      "source": {
+        "type": "docker",
+        "location": "docker/mcp-server-hub:latest"
+      },
       "tags": ["DevOps", "Infrastructure", "Docker"],
-      "env": { "DOCKER_PAT": { "description": "Personal Access Token for private repos", "required": false } }
+      "env": {
+        "DOCKER_PAT": {
+          "description": "Personal Access Token for private repos",
+          "required": false
+        }
+      }
     },
     {
       "name": "git-mcp",
       "description": "Official GitHub MCP Server for repository management, PRs, and issues.",
       "vendor": "Docker Inc.",
-      "source": { "type": "docker", "location": "docker/mcp-server-git:latest" },
+      "source": {
+        "type": "docker",
+        "location": "docker/mcp-server-git:latest"
+      },
       "tags": ["DevOps", "Productivity", "GitHub"],
-      "env": { "GITHUB_TOKEN": { "description": "GitHub Personal Access Token", "required": true } }
+      "env": {
+        "GITHUB_TOKEN": {
+          "description": "GitHub Personal Access Token",
+          "required": true
+        }
+      }
     },
     {
       "name": "base-mcp",
       "description": "Extends MCP client capabilities to do anything on Base blockchain.",
       "vendor": "Base",
-      "source": { "type": "git", "location": "https://github.com/base/base-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/base/base-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Base"],
       "env": {}
     },
@@ -29,7 +48,10 @@
       "name": "bsc-mcp",
       "description": "Plug-and-play tool to send BNB, transfer BEP-20, deploy tokens on BSC.",
       "vendor": "TermiX-official",
-      "source": { "type": "git", "location": "https://github.com/TermiX-official/bsc-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/TermiX-official/bsc-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "BSC"],
       "env": {}
     },
@@ -37,7 +59,10 @@
       "name": "goat-mcp",
       "description": "GOAT SDK integration for EVM and Solana chains.",
       "vendor": "goat-sdk",
-      "source": { "type": "git", "location": "https://github.com/goat-sdk/goat/tree/main/typescript/examples/by-framework/model-context-protocol" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/goat-sdk/goat/tree/main/typescript/examples/by-framework/model-context-protocol"
+      },
       "tags": ["Chain-RPC", "Web3", "Multichain"],
       "env": {}
     },
@@ -45,7 +70,10 @@
       "name": "evm-mcp-server",
       "description": "Comprehensive blockchain services across multiple EVM-compatible networks.",
       "vendor": "mcpdotdirect",
-      "source": { "type": "git", "location": "https://github.com/mcpdotdirect/evm-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/mcpdotdirect/evm-mcp-server"
+      },
       "tags": ["Chain-RPC", "Web3", "EVM"],
       "env": {}
     },
@@ -53,7 +81,10 @@
       "name": "web3-mcp",
       "description": "Simple RPC endpoints for common blockchain operations.",
       "vendor": "strangelove-ventures",
-      "source": { "type": "git", "location": "https://github.com/strangelove-ventures/web3-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/strangelove-ventures/web3-mcp"
+      },
       "tags": ["Chain-RPC", "Web3"],
       "env": {}
     },
@@ -61,7 +92,10 @@
       "name": "onchain-mcp",
       "description": "Blockchain data interaction through the Bankless API.",
       "vendor": "Bankless",
-      "source": { "type": "git", "location": "https://github.com/Bankless/onchain-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/Bankless/onchain-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Data"],
       "env": {}
     },
@@ -69,7 +103,10 @@
       "name": "bitcoin-mcp",
       "description": "Interact with Bitcoin and Lightning Network (generate keys, validate addresses, decode tx).",
       "vendor": "AbdelStark",
-      "source": { "type": "git", "location": "https://github.com/AbdelStark/bitcoin-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/AbdelStark/bitcoin-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Bitcoin"],
       "env": {}
     },
@@ -77,15 +114,26 @@
       "name": "mcp-etherscan-server",
       "description": "Provides Ethereum blockchain data tools via Etherscan's API.",
       "vendor": "crazyrabbitLTC",
-      "source": { "type": "git", "location": "https://github.com/crazyrabbitLTC/mcp-etherscan-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/crazyrabbitLTC/mcp-etherscan-server"
+      },
       "tags": ["Chain-RPC", "Web3", "Ethereum", "Explorer"],
-      "env": { "ETHERSCAN_API_KEY": { "description": "Etherscan API Key", "required": true } }
+      "env": {
+        "ETHERSCAN_API_KEY": {
+          "description": "Etherscan API Key",
+          "required": true
+        }
+      }
     },
     {
       "name": "eth-mcp",
       "description": "Server for interacting with the Ethereum blockchain.",
       "vendor": "0xKoda",
-      "source": { "type": "git", "location": "https://github.com/0xKoda/eth-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/0xKoda/eth-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Ethereum"],
       "env": {}
     },
@@ -93,7 +141,10 @@
       "name": "lightning-mcp",
       "description": "Interact with Lightning Network to pay invoices and more.",
       "vendor": "AbdelStark",
-      "source": { "type": "git", "location": "https://github.com/AbdelStark/lightning-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/AbdelStark/lightning-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Lightning"],
       "env": {}
     },
@@ -101,7 +152,10 @@
       "name": "ergo-mcp",
       "description": "Interact with the Ergo blockchain.",
       "vendor": "marctheshark3",
-      "source": { "type": "git", "location": "https://github.com/marctheshark3/ergo-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/marctheshark3/ergo-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Ergo"],
       "env": {}
     },
@@ -109,7 +163,10 @@
       "name": "blocknative-mcp",
       "description": "Real-time gas price predictions across multiple blockchains.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/blocknative-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/blocknative-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Gas"],
       "env": {}
     },
@@ -117,7 +174,10 @@
       "name": "thegraph-mcp",
       "description": "Powers AI agents with indexed blockchain data from The Graph.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/thegraph-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/thegraph-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Data"],
       "env": {}
     },
@@ -125,7 +185,10 @@
       "name": "algorand-mcp",
       "description": "Algorand Model Context Protocol (Server & Client).",
       "vendor": "GoPlausible",
-      "source": { "type": "git", "location": "https://github.com/GoPlausible/algorand-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/GoPlausible/algorand-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Algorand"],
       "env": {}
     },
@@ -133,23 +196,39 @@
       "name": "mcp-server-helius",
       "description": "Access to Solana blockchain data via the Helius API.",
       "vendor": "dcSpark",
-      "source": { "type": "git", "location": "https://github.com/dcSpark/mcp-server-helius" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/dcSpark/mcp-server-helius"
+      },
       "tags": ["Chain-RPC", "Web3", "Solana"],
-      "env": { "HELIUS_API_KEY": { "description": "Helius API Key", "required": true } }
+      "env": {
+        "HELIUS_API_KEY": { "description": "Helius API Key", "required": true }
+      }
     },
     {
       "name": "alchemy-sdk-mcp",
       "description": "Integration with Alchemy SDK for blockchain and NFT operations.",
       "vendor": "itsanishjain",
-      "source": { "type": "git", "location": "https://github.com/itsanishjain/alchemy-sdk-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/itsanishjain/alchemy-sdk-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Infrastructure"],
-      "env": { "ALCHEMY_API_KEY": { "description": "Alchemy API Key", "required": true } }
+      "env": {
+        "ALCHEMY_API_KEY": {
+          "description": "Alchemy API Key",
+          "required": true
+        }
+      }
     },
     {
       "name": "polygon-mcp",
       "description": "Interact with the Polygon PoS blockchain.",
       "vendor": "Dablclub",
-      "source": { "type": "git", "location": "https://github.com/Dablclub/polygon-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/Dablclub/polygon-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Polygon"],
       "env": {}
     },
@@ -157,7 +236,10 @@
       "name": "flow-mcp-server",
       "description": "Interact with the Flow blockchain.",
       "vendor": "lmcmz",
-      "source": { "type": "git", "location": "https://github.com/lmcmz/flow-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/lmcmz/flow-mcp-server"
+      },
       "tags": ["Chain-RPC", "Web3", "Flow"],
       "env": {}
     },
@@ -165,7 +247,10 @@
       "name": "near-mcp",
       "description": "MCP server for the NEAR blockchain.",
       "vendor": "nearai",
-      "source": { "type": "git", "location": "https://github.com/nearai/near-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/nearai/near-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "NEAR"],
       "env": {}
     },
@@ -173,7 +258,10 @@
       "name": "linea-mcp",
       "description": "Interact with the Linea blockchain.",
       "vendor": "qvkare",
-      "source": { "type": "git", "location": "https://github.com/qvkare/linea-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/qvkare/linea-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Linea"],
       "env": {}
     },
@@ -181,7 +269,10 @@
       "name": "codex-mcp",
       "description": "Enriched blockchain data from Codex.",
       "vendor": "Codex-Data",
-      "source": { "type": "git", "location": "https://github.com/Codex-Data/codex-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/Codex-Data/codex-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Data"],
       "env": {}
     },
@@ -189,7 +280,10 @@
       "name": "starknet-mcp-server",
       "description": "Comprehensive server for Starknet blockchain interactions.",
       "vendor": "mcpdotdirect",
-      "source": { "type": "git", "location": "https://github.com/mcpdotdirect/starknet-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/mcpdotdirect/starknet-mcp-server"
+      },
       "tags": ["Chain-RPC", "Web3", "Starknet"],
       "env": {}
     },
@@ -197,7 +291,10 @@
       "name": "mcp-xrpl",
       "description": "Blockchain services for the XRP Ledger ecosystem.",
       "vendor": "RomThpt",
-      "source": { "type": "git", "location": "https://github.com/RomThpt/mcp-xrpl" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/RomThpt/mcp-xrpl"
+      },
       "tags": ["Chain-RPC", "Web3", "XRPL"],
       "env": {}
     },
@@ -205,7 +302,10 @@
       "name": "go-sui-mcp",
       "description": "Go-based server for Sui blockchain interactions.",
       "vendor": "hawkli-1994",
-      "source": { "type": "git", "location": "https://github.com/hawkli-1994/go-sui-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/hawkli-1994/go-sui-mcp"
+      },
       "tags": ["Chain-RPC", "Web3", "Sui"],
       "env": {}
     },
@@ -213,7 +313,10 @@
       "name": "binance-mcp",
       "description": "Backend service to interact with the Binance API.",
       "vendor": "TermiX-official",
-      "source": { "type": "git", "location": "https://github.com/TermiX-official/binance-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/TermiX-official/binance-mcp"
+      },
       "tags": ["Trading", "Web3", "CEX"],
       "env": {}
     },
@@ -229,7 +332,10 @@
       "name": "mcp-server-jupiter",
       "description": "Access to Jupiter's swap API on Solana.",
       "vendor": "dcSpark",
-      "source": { "type": "git", "location": "https://github.com/dcSpark/mcp-server-jupiter" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/dcSpark/mcp-server-jupiter"
+      },
       "tags": ["Trading", "Web3", "Solana", "DEX"],
       "env": {}
     },
@@ -237,7 +343,10 @@
       "name": "mcp-free-usdc-transfer",
       "description": "Free USDC transfers on Base with Coinbase CDP integration.",
       "vendor": "magnetai",
-      "source": { "type": "git", "location": "https://github.com/magnetai/mcp-free-usdc-transfer" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/magnetai/mcp-free-usdc-transfer"
+      },
       "tags": ["Trading", "Web3", "Base"],
       "env": {}
     },
@@ -245,7 +354,10 @@
       "name": "uniswap-trader-mcp",
       "description": "Automate token swaps on Uniswap DEX across multiple blockchains.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/uniswap-trader-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/uniswap-trader-mcp"
+      },
       "tags": ["Trading", "Web3", "DEX"],
       "env": {}
     },
@@ -253,7 +365,10 @@
       "name": "freqtrade-mcp",
       "description": "Integrates with Freqtrade cryptocurrency trading bot.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/freqtrade-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/freqtrade-mcp"
+      },
       "tags": ["Trading", "Web3", "Bot"],
       "env": {}
     },
@@ -261,7 +376,10 @@
       "name": "pumpswap-mcp",
       "description": "Real-time token swaps and automated trading on PumpSwap.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/pumpswap-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/pumpswap-mcp"
+      },
       "tags": ["Trading", "Web3", "Solana"],
       "env": {}
     },
@@ -269,7 +387,10 @@
       "name": "sui-trader-mcp",
       "description": "Optimal token swaps on Sui blockchain.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/sui-trader-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/sui-trader-mcp"
+      },
       "tags": ["Trading", "Web3", "Sui"],
       "env": {}
     },
@@ -277,7 +398,10 @@
       "name": "token-minter-mcp",
       "description": "Mint ERC-20 tokens across 21 blockchains.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/token-minter-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/token-minter-mcp"
+      },
       "tags": ["Trading", "Web3", "Tools"],
       "env": {}
     },
@@ -285,7 +409,10 @@
       "name": "armor-crypto-mcp",
       "description": "Interacting with Blockchain, Swaps, Strategic Planning.",
       "vendor": "armorwallet",
-      "source": { "type": "git", "location": "https://github.com/armorwallet/armor-crypto-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/armorwallet/armor-crypto-mcp"
+      },
       "tags": ["Trading", "Web3", "Wallet"],
       "env": {}
     },
@@ -293,7 +420,10 @@
       "name": "server-hyperliquid",
       "description": "Integration with Hyperliquid SDK.",
       "vendor": "mektigboy",
-      "source": { "type": "git", "location": "https://github.com/mektigboy/server-hyperliquid" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/mektigboy/server-hyperliquid"
+      },
       "tags": ["Trading", "Web3", "DEX"],
       "env": {}
     },
@@ -301,7 +431,10 @@
       "name": "nwc-mcp-server",
       "description": "Connect Bitcoin Lightning wallet via Nostr Wallet Connect.",
       "vendor": "getalby",
-      "source": { "type": "git", "location": "https://github.com/getalby/nwc-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/getalby/nwc-mcp-server"
+      },
       "tags": ["Trading", "Web3", "Bitcoin"],
       "env": {}
     },
@@ -309,7 +442,10 @@
       "name": "bybit-mcp",
       "description": "Read-only access to Bybit exchange API.",
       "vendor": "sammcj",
-      "source": { "type": "git", "location": "https://github.com/sammcj/bybit-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/sammcj/bybit-mcp"
+      },
       "tags": ["Trading", "Web3", "CEX"],
       "env": {}
     },
@@ -317,7 +453,10 @@
       "name": "bsv-mcp",
       "description": "Bitcoin SV (BSV) tools (wallet, ordinals, utilities).",
       "vendor": "b-open-io",
-      "source": { "type": "git", "location": "https://github.com/b-open-io/bsv-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/b-open-io/bsv-mcp"
+      },
       "tags": ["Trading", "Web3", "BSV"],
       "env": {}
     },
@@ -325,7 +464,10 @@
       "name": "aiowhitebit-mcp",
       "description": "WhiteBit cryptocurrency exchange API integration.",
       "vendor": "doubledare704",
-      "source": { "type": "git", "location": "https://github.com/doubledare704/aiowhitebit-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/doubledare704/aiowhitebit-mcp"
+      },
       "tags": ["Trading", "Web3", "CEX"],
       "env": {}
     },
@@ -333,7 +475,10 @@
       "name": "0xmonk-mcp-server",
       "description": "Interact with 0xMONK Trading Agent API.",
       "vendor": "fere-ai",
-      "source": { "type": "git", "location": "https://github.com/fere-ai/mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/fere-ai/mcp-server"
+      },
       "tags": ["Trading", "Web3", "Agent"],
       "env": {}
     },
@@ -341,7 +486,10 @@
       "name": "kuru-mcp-server",
       "description": "Access Kuru.io crypto exchange data.",
       "vendor": "georgyturevich",
-      "source": { "type": "git", "location": "https://github.com/georgyturevich/kuru-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/georgyturevich/kuru-mcp-server"
+      },
       "tags": ["Trading", "Web3", "CEX"],
       "env": {}
     },
@@ -349,7 +497,10 @@
       "name": "upbit-mcp-server",
       "description": "Interact with Upbit Exchange (market data, orders, accounts).",
       "vendor": "solangii",
-      "source": { "type": "git", "location": "https://github.com/solangii/upbit-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/solangii/upbit-mcp-server"
+      },
       "tags": ["Trading", "Web3", "CEX"],
       "env": {}
     },
@@ -357,7 +508,10 @@
       "name": "collinsezedike-jupiter-mcp",
       "description": "Instant token swaps and limit orders on Solana using Jupiter.",
       "vendor": "collinsezedike",
-      "source": { "type": "git", "location": "https://github.com/collinsezedike/jupiter-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/collinsezedike/jupiter-mcp"
+      },
       "tags": ["Trading", "Web3", "Solana"],
       "env": {}
     },
@@ -365,7 +519,10 @@
       "name": "demcp-meson-mcp",
       "description": "Meson cross-chain transaction server.",
       "vendor": "demcp",
-      "source": { "type": "git", "location": "https://github.com/demcp/demcp-meson-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/demcp/demcp-meson-mcp"
+      },
       "tags": ["DeFi", "Web3", "Bridge"],
       "env": {}
     },
@@ -373,7 +530,10 @@
       "name": "defillama-mcp",
       "description": "Wrapper around DeFiLlama ecosystem API.",
       "vendor": "demcp",
-      "source": { "type": "git", "location": "https://github.com/demcp/defillama-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/demcp/defillama-mcp"
+      },
       "tags": ["DeFi", "Web3", "Analytics"],
       "env": {}
     },
@@ -381,7 +541,10 @@
       "name": "bridge-rates-mcp",
       "description": "Real-time cross-chain bridge rates and optimal routes.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/bridge-rates-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/bridge-rates-mcp"
+      },
       "tags": ["DeFi", "Web3", "Bridge"],
       "env": {}
     },
@@ -389,7 +552,10 @@
       "name": "chainlink-feeds-mcp",
       "description": "Real-time access to Chainlink price feeds.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/chainlink-feeds-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/chainlink-feeds-mcp"
+      },
       "tags": ["DeFi", "Web3", "Oracle"],
       "env": {}
     },
@@ -397,7 +563,10 @@
       "name": "defi-yields-mcp",
       "description": "Explore DeFi yield opportunities.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/defi-yields-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/defi-yields-mcp"
+      },
       "tags": ["DeFi", "Web3", "Yield"],
       "env": {}
     },
@@ -405,7 +574,10 @@
       "name": "pancakeswap-poolspy-mcp",
       "description": "Track newly created pools on PancakeSwap.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/pancakeswap-poolspy-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/pancakeswap-poolspy-mcp"
+      },
       "tags": ["DeFi", "Web3", "Analytics"],
       "env": {}
     },
@@ -413,7 +585,10 @@
       "name": "token-revoke-mcp",
       "description": "Check and revoke ERC-20 token allowances.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/token-revoke-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/token-revoke-mcp"
+      },
       "tags": ["DeFi", "Web3", "Security"],
       "env": {}
     },
@@ -421,7 +596,10 @@
       "name": "uniswap-poolspy-mcp",
       "description": "Track newly created pools on Uniswap.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/uniswap-poolspy-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/uniswap-poolspy-mcp"
+      },
       "tags": ["DeFi", "Web3", "Analytics"],
       "env": {}
     },
@@ -429,7 +607,10 @@
       "name": "assetCLI",
       "description": "Vibe coding bonding curves, DEX & DAOs (Solana AI Agent Competition Winner).",
       "vendor": "assetCLI",
-      "source": { "type": "git", "location": "https://github.com/assetCLI/assetCLI-init" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/assetCLI/assetCLI-init"
+      },
       "tags": ["DeFi", "Web3", "Solana"],
       "env": {}
     },
@@ -437,7 +618,10 @@
       "name": "wormhole-mcp",
       "description": "Automatic token transfer across blockchains using Wormhole SDK.",
       "vendor": "collinsezedike",
-      "source": { "type": "git", "location": "https://github.com/collinsezedike/wormhole-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/collinsezedike/wormhole-mcp"
+      },
       "tags": ["DeFi", "Web3", "Bridge"],
       "env": {}
     },
@@ -445,7 +629,10 @@
       "name": "mcp-server-ccxt",
       "description": "Real-time and historical market data via CCXT.",
       "vendor": "Nayshins",
-      "source": { "type": "git", "location": "https://github.com/Nayshins/mcp-server-ccxt" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/Nayshins/mcp-server-ccxt"
+      },
       "tags": ["Market Data", "Web3", "CEX"],
       "env": {}
     },
@@ -453,7 +640,10 @@
       "name": "mcp-crypto-price",
       "description": "Crypto analysis using CoinCap API.",
       "vendor": "truss44",
-      "source": { "type": "git", "location": "https://github.com/truss44/mcp-crypto-price" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/truss44/mcp-crypto-price"
+      },
       "tags": ["Market Data", "Web3", "Analytics"],
       "env": {}
     },
@@ -461,7 +651,10 @@
       "name": "heurist-mesh-mcp-server",
       "description": "Connects to Heurist Mesh APIs for blockchain and web3 tools.",
       "vendor": "heurist-network",
-      "source": { "type": "git", "location": "https://github.com/heurist-network/heurist-mesh-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/heurist-network/heurist-mesh-mcp-server"
+      },
       "tags": ["Market Data", "Web3", "Mesh"],
       "env": {}
     },
@@ -469,7 +662,10 @@
       "name": "coincap-mcp",
       "description": "Access crypto data from CoinCap API.",
       "vendor": "QuantGeekDev",
-      "source": { "type": "git", "location": "https://github.com/QuantGeekDev/coincap-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/QuantGeekDev/coincap-mcp"
+      },
       "tags": ["Market Data", "Web3", "Analytics"],
       "env": {}
     },
@@ -477,7 +673,10 @@
       "name": "crypto-liquidations-mcp",
       "description": "Streams real-time liquidation events from Binance.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-liquidations-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-liquidations-mcp"
+      },
       "tags": ["Market Data", "Web3", "Derivatives"],
       "env": {}
     },
@@ -485,7 +684,10 @@
       "name": "crypto-orderbook-mcp",
       "description": "Analyze order book depth and imbalance.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-orderbook-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-orderbook-mcp"
+      },
       "tags": ["Market Data", "Web3", "Trading"],
       "env": {}
     },
@@ -493,7 +695,10 @@
       "name": "crypto-pegmon-mcp",
       "description": "Track stablecoin peg integrity.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-pegmon-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-pegmon-mcp"
+      },
       "tags": ["Market Data", "Web3", "Stablecoins"],
       "env": {}
     },
@@ -501,7 +706,10 @@
       "name": "crypto-projects-mcp",
       "description": "Cryptocurrency project data from Mobula.io.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-projects-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-projects-mcp"
+      },
       "tags": ["Market Data", "Web3", "Info"],
       "env": {}
     },
@@ -509,7 +717,10 @@
       "name": "dune-analytics-mcp",
       "description": "Bridges Dune Analytics data to AI agents.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/dune-analytics-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/dune-analytics-mcp"
+      },
       "tags": ["Market Data", "Web3", "Analytics"],
       "env": {}
     },
@@ -517,7 +728,10 @@
       "name": "coinmarket-mcp-server",
       "description": "Fetches prices, market cap, volume from CoinMarketCap.",
       "vendor": "anjor",
-      "source": { "type": "git", "location": "https://github.com/anjor/coinmarket-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/anjor/coinmarket-mcp-server"
+      },
       "tags": ["Market Data", "Web3", "Info"],
       "env": {}
     },
@@ -525,7 +739,10 @@
       "name": "okx-mcp-server",
       "description": "Fetches real-time data from OKX.",
       "vendor": "badger3000",
-      "source": { "type": "git", "location": "https://github.com/badger3000/okx-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/badger3000/okx-mcp-server"
+      },
       "tags": ["Market Data", "Web3", "CEX"],
       "env": {}
     },
@@ -533,7 +750,10 @@
       "name": "mcp-coingecko-server",
       "description": "Interacting with the CoinGecko Pro API.",
       "vendor": "crazyrabbitLTC",
-      "source": { "type": "git", "location": "https://github.com/crazyrabbitLTC/mcp-coingecko-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/crazyrabbitLTC/mcp-coingecko-server"
+      },
       "tags": ["Market Data", "Web3", "Info"],
       "env": {}
     },
@@ -541,7 +761,10 @@
       "name": "blockbeats-mcp",
       "description": "Blockchain news and in-depth articles from BlockBeats.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/blockbeats-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/blockbeats-mcp"
+      },
       "tags": ["Market Data", "Web3", "News"],
       "env": {}
     },
@@ -549,7 +772,10 @@
       "name": "cointelegraph-mcp",
       "description": "Real-time news from Cointelegraph.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/cointelegraph-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/cointelegraph-mcp"
+      },
       "tags": ["Market Data", "Web3", "News"],
       "env": {}
     },
@@ -557,7 +783,10 @@
       "name": "cryptopanic-mcp-server",
       "description": "Latest cryptocurrency news from CryptoPanic.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/cryptopanic-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/cryptopanic-mcp-server"
+      },
       "tags": ["Market Data", "Web3", "News"],
       "env": {}
     },
@@ -565,7 +794,10 @@
       "name": "crypto-feargreed-mcp",
       "description": "Real-time Crypto Fear & Greed Index data.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-feargreed-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-feargreed-mcp"
+      },
       "tags": ["Market Data", "Web3", "Sentiment"],
       "env": {}
     },
@@ -573,7 +805,10 @@
       "name": "crypto-indicators-mcp",
       "description": "Technical analysis indicators and strategies.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-indicators-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-indicators-mcp"
+      },
       "tags": ["Market Data", "Web3", "TA"],
       "env": {}
     },
@@ -581,7 +816,10 @@
       "name": "crypto-news-mcp",
       "description": "Real-time crypto news from NewsData.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-news-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-news-mcp"
+      },
       "tags": ["Market Data", "Web3", "News"],
       "env": {}
     },
@@ -589,7 +827,10 @@
       "name": "crypto-portfolio-mcp",
       "description": "Tracking and managing cryptocurrency portfolio allocations.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-portfolio-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-portfolio-mcp"
+      },
       "tags": ["Market Data", "Web3", "Portfolio"],
       "env": {}
     },
@@ -597,7 +838,10 @@
       "name": "crypto-sentiment-mcp",
       "description": "Cryptocurrency sentiment analysis.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-sentiment-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-sentiment-mcp"
+      },
       "tags": ["Market Data", "Web3", "Sentiment"],
       "env": {}
     },
@@ -605,7 +849,10 @@
       "name": "crypto-trending-mcp",
       "description": "Trading trending tokens on CoinGecko.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-trending-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-trending-mcp"
+      },
       "tags": ["Market Data", "Web3", "Trends"],
       "env": {}
     },
@@ -613,7 +860,10 @@
       "name": "crypto-whitepapers-mcp",
       "description": "Knowledge base of crypto whitepapers.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-whitepapers-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/crypto-whitepapers-mcp"
+      },
       "tags": ["Market Data", "Web3", "Research"],
       "env": {}
     },
@@ -621,7 +871,10 @@
       "name": "funding-rates-mcp",
       "description": "Real-time funding rate data across major exchanges.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/funding-rates-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/funding-rates-mcp"
+      },
       "tags": ["Market Data", "Web3", "Derivatives"],
       "env": {}
     },
@@ -629,7 +882,10 @@
       "name": "rug-check-mcp",
       "description": "Detect potential risks in Solana meme tokens.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/rug-check-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/rug-check-mcp"
+      },
       "tags": ["Market Data", "Web3", "Security"],
       "env": {}
     },
@@ -637,7 +893,10 @@
       "name": "whale-tracker-mcp",
       "description": "Tracking cryptocurrency whale transactions.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/whale-tracker-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/whale-tracker-mcp"
+      },
       "tags": ["Market Data", "Web3", "Analytics"],
       "env": {}
     },
@@ -645,7 +904,10 @@
       "name": "web3-research-mcp",
       "description": "Deep Research for crypto.",
       "vendor": "aaronjmars",
-      "source": { "type": "git", "location": "https://github.com/aaronjmars/web3-research-mcp/" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/aaronjmars/web3-research-mcp/"
+      },
       "tags": ["Market Data", "Web3", "Research"],
       "env": {}
     },
@@ -653,7 +915,10 @@
       "name": "dexscreener-mcp-server",
       "description": "Access DexScreener API (DEX pair data, tokens, stats).",
       "vendor": "openSVM",
-      "source": { "type": "git", "location": "https://github.com/openSVM/dexscreener-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/openSVM/dexscreener-mcp-server"
+      },
       "tags": ["Market Data", "Web3", "DEX"],
       "env": {}
     },
@@ -661,7 +926,10 @@
       "name": "coin-mcp-server",
       "description": "Bitget API info.",
       "vendor": "pwh-pwh",
-      "source": { "type": "git", "location": "https://github.com/pwh-pwh/coin-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/pwh-pwh/coin-mcp-server"
+      },
       "tags": ["Market Data", "Web3", "CEX"],
       "env": {}
     },
@@ -669,7 +937,10 @@
       "name": "bicscan-mcp",
       "description": "risk scoring API MCP Server.",
       "vendor": "ahnlabio",
-      "source": { "type": "git", "location": "https://github.com/ahnlabio/bicscan-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/ahnlabio/bicscan-mcp"
+      },
       "tags": ["Market Data", "Web3", "Security"],
       "env": {}
     },
@@ -677,7 +948,10 @@
       "name": "coinstats-mcp",
       "description": "MCP Server for CoinStats API.",
       "vendor": "CoinStatsHQ",
-      "source": { "type": "git", "location": "https://github.com/CoinStatsHQ/coinstats-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/CoinStatsHQ/coinstats-mcp"
+      },
       "tags": ["Market Data", "Web3", "Portfolio"],
       "env": {}
     },
@@ -685,7 +959,10 @@
       "name": "solana-mcp",
       "description": "Analyzing memecoins, tracking trends on Solana.",
       "vendor": "tony-42069",
-      "source": { "type": "git", "location": "https://github.com/tony-42069/solana-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/tony-42069/solana-mcp"
+      },
       "tags": ["Market Data", "Web3", "Solana"],
       "env": {}
     },
@@ -693,7 +970,10 @@
       "name": "hubble-ai-mcp",
       "description": "Analytics tool for Solana blockchain.",
       "vendor": "HubbleVision",
-      "source": { "type": "git", "location": "https://github.com/HubbleVision/hubble-ai-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/HubbleVision/hubble-ai-mcp"
+      },
       "tags": ["Market Data", "Web3", "Solana"],
       "env": {}
     },
@@ -701,7 +981,10 @@
       "name": "solana-dev-mcp",
       "description": "Simple server for Solana development.",
       "vendor": "solana-foundation",
-      "source": { "type": "git", "location": "https://github.com/solana-foundation/solana-dev-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/solana-foundation/solana-dev-mcp"
+      },
       "tags": ["Tool", "Web3", "Solana"],
       "env": {}
     },
@@ -709,7 +992,10 @@
       "name": "digimon-engine",
       "description": "Open-source gaming platform for AI agents.",
       "vendor": "CohumanSpace",
-      "source": { "type": "git", "location": "https://github.com/CohumanSpace/digimon-engine/tree/main/mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/CohumanSpace/digimon-engine/tree/main/mcp"
+      },
       "tags": ["Tool", "Web3", "Gaming"],
       "env": {}
     },
@@ -717,7 +1003,10 @@
       "name": "nodit-mcp-server",
       "description": "Connects AI agents to structured blockchain data.",
       "vendor": "noditlabs",
-      "source": { "type": "git", "location": "https://github.com/noditlabs/nodit-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/noditlabs/nodit-mcp-server"
+      },
       "tags": ["Tool", "Web3", "Data"],
       "env": {}
     },
@@ -725,7 +1014,10 @@
       "name": "metaplex-pnft-mcp",
       "description": "Creation of programmable NFTs (pNFTs) using Metaplex.",
       "vendor": "collinsezedike",
-      "source": { "type": "git", "location": "https://github.com/collinsezedike/metaplex-pnft-mcp/" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/collinsezedike/metaplex-pnft-mcp/"
+      },
       "tags": ["Tool", "Web3", "NFT"],
       "env": {}
     },
@@ -733,7 +1025,10 @@
       "name": "x-mcp",
       "description": "Create, manage and publish X/Twitter posts.",
       "vendor": "vidhupv",
-      "source": { "type": "git", "location": "https://github.com/vidhupv/x-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/vidhupv/x-mcp"
+      },
       "tags": ["Social", "Twitter"],
       "env": {}
     },
@@ -741,7 +1036,10 @@
       "name": "mcp-discord",
       "description": "Discord integration capabilities.",
       "vendor": "hanweg",
-      "source": { "type": "git", "location": "https://github.com/hanweg/mcp-discord" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/hanweg/mcp-discord"
+      },
       "tags": ["Social", "Discord"],
       "env": {}
     },
@@ -749,7 +1047,10 @@
       "name": "mcp-telegram",
       "description": "Bridge between Telegram API and AI assistants.",
       "vendor": "sparfenyuk",
-      "source": { "type": "git", "location": "https://github.com/sparfenyuk/mcp-telegram" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/sparfenyuk/mcp-telegram"
+      },
       "tags": ["Social", "Telegram"],
       "env": {}
     },
@@ -757,7 +1058,10 @@
       "name": "notion-mcp-server",
       "description": "Official Notion MCP Server.",
       "vendor": "makenotion",
-      "source": { "type": "git", "location": "https://github.com/makenotion/notion-mcp-server" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/makenotion/notion-mcp-server"
+      },
       "tags": ["Social", "Productivity", "Notion"],
       "env": {}
     },
@@ -765,7 +1069,10 @@
       "name": "twitter-username-changes-mcp",
       "description": "Tracks historical changes of Twitter usernames.",
       "vendor": "kukapay",
-      "source": { "type": "git", "location": "https://github.com/kukapay/twitter-username-changes-mcp" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/kukapay/twitter-username-changes-mcp"
+      },
       "tags": ["Social", "Twitter"],
       "env": {}
     },
@@ -773,7 +1080,10 @@
       "name": "excel-mcp",
       "description": "Read and modify Excel spreadsheets locally.",
       "vendor": "Community",
-      "source": { "type": "git", "location": "https://github.com/mcp-excel/mcp-excel" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/mcp-excel/mcp-excel"
+      },
       "tags": ["Productivity", "Office", "Data"],
       "env": {}
     },
@@ -781,23 +1091,42 @@
       "name": "google-drive-mcp",
       "description": "Access files and manage documents in Google Drive.",
       "vendor": "Model Protocol",
-      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive"
+      },
       "tags": ["Productivity", "Cloud", "Google"],
-      "env": { "GOOGLE_APPLICATION_CREDENTIALS": { "description": "Path to Google Service Account JSON", "required": true } }
+      "env": {
+        "GOOGLE_APPLICATION_CREDENTIALS": {
+          "description": "Path to Google Service Account JSON",
+          "required": true
+        }
+      }
     },
     {
       "name": "sentry-mcp",
       "description": "Query Sentry issues and errors directly from your AI agent.",
       "vendor": "Model Protocol",
-      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/sentry" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/sentry"
+      },
       "tags": ["DevOps", "Monitoring"],
-      "env": { "SENTRY_AUTH_TOKEN": { "description": "Sentry Auth Token", "required": true } }
+      "env": {
+        "SENTRY_AUTH_TOKEN": {
+          "description": "Sentry Auth Token",
+          "required": true
+        }
+      }
     },
     {
       "name": "sequential-thinking",
       "description": "A tool to facilitate dynamic and reflective problem-solving through thoughts. Enables Chain-of-Thought reasoning.",
       "vendor": "Model Protocol",
-      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequential-thinking" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequential-thinking"
+      },
       "tags": ["Utility", "Reasoning", "AI"],
       "env": {}
     },
@@ -805,7 +1134,10 @@
       "name": "time-mcp",
       "description": "Provides current time and timezone utilities to AI agents.",
       "vendor": "Model Protocol",
-      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/time" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/time"
+      },
       "tags": ["Utility", "Time"],
       "env": {}
     },
@@ -813,8 +1145,1024 @@
       "name": "filesystem-mcp",
       "description": "Securely read and write files on the local host system.",
       "vendor": "Model Protocol",
-      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem" },
+      "source": {
+        "type": "git",
+        "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem"
+      },
       "tags": ["Utility", "System"],
+      "env": {}
+    },
+    {
+      "name": "arbitrum-mcp",
+      "description": "MCP server for interfacing with Arbitrum Chains and Nitro nodes.",
+      "vendor": "dewanshparashar",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/dewanshparashar/arbitrum-mcp"
+      },
+      "tags": ["Chain-RPC", "Web3", "Arbitrum"],
+      "env": {}
+    },
+    {
+      "name": "arbitrum-stylus-mcp",
+      "description": "Developer MCP Server for Arbitrum Stylus (WASM smart contracts).",
+      "vendor": "JustAnotherDevv",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/JustAnotherDevv/Arbitrum-Stylus-MCP"
+      },
+      "tags": ["Chain-RPC", "Web3", "Arbitrum", "Stylus"],
+      "env": {}
+    },
+    {
+      "name": "aptos-mcp-server",
+      "description": "Interact with Aptos blockchain and documentation.",
+      "vendor": "Tlazypanda",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/Tlazypanda/aptos-mcp-server"
+      },
+      "tags": ["Chain-RPC", "Web3", "Aptos"],
+      "env": {}
+    },
+    {
+      "name": "metatrader-mcp-server",
+      "description": "Enable AI LLMs to trade using MetaTrader platform.",
+      "vendor": "ariadng",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/ariadng/metatrader-mcp-server"
+      },
+      "tags": ["Trading", "Web3", "Forex", "MetaTrader"],
+      "env": {}
+    },
+    {
+      "name": "polymarket-mcp-server",
+      "description": "AI-Powered MCP Server for Polymarket prediction markets.",
+      "vendor": "caiovicentino",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/caiovicentino/polymarket-mcp-server"
+      },
+      "tags": ["Trading", "Web3", "Prediction Markets", "Polymarket"],
+      "env": {}
+    },
+    {
+      "name": "ccxt-mcp-server",
+      "description": "Standardized interface for 100+ cryptocurrency exchanges via CCXT.",
+      "vendor": "lazy-dinosaur",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/lazy-dinosaur/ccxt-mcp"
+      },
+      "tags": ["Trading", "Web3", "CEX", "CCXT"],
+      "env": {}
+    },
+    {
+      "name": "binance-mcp-agent",
+      "description": "Unofficial tools for Binance MCP, designed for AI Agents.",
+      "vendor": "AnalyticAce",
+      "source": {
+        "type": "git",
+        "location": "https://github.com/AnalyticAce/binance-mcp-server"
+      },
+      "tags": ["Trading", "Web3", "CEX", "Binance", "Agent"],
+      "env": {}
+    },
+    {
+      "name": "playwright-mcp",
+      "description": "Playwright MCP server for browser automation.",
+      "vendor": "microsoft",
+      "source": { "type": "git", "location": "https://github.com/microsoft/playwright-mcp" },
+      "tags": ["Automation", "Browser", "Testing"],
+      "env": {}
+    },
+    {
+      "name": "github-mcp-server",
+      "description": "GitHub's official MCP Server.",
+      "vendor": "github",
+      "source": { "type": "git", "location": "https://github.com/github/github-mcp-server" },
+      "tags": ["DevTools", "GitHub", "Version Control"],
+      "env": {}
+    },
+    {
+      "name": "whatsapp-mcp",
+      "description": "WhatsApp MCP server.",
+      "vendor": "lharries",
+      "source": { "type": "git", "location": "https://github.com/lharries/whatsapp-mcp" },
+      "tags": ["Messaging", "Social", "WhatsApp"],
+      "env": {}
+    },
+    {
+      "name": "pal-mcp-server",
+      "description": "Unified interface for Claude Code, GeminiCLI, CodexCLI and more.",
+      "vendor": "BeehiveInnovations",
+      "source": { "type": "git", "location": "https://github.com/BeehiveInnovations/pal-mcp-server" },
+      "tags": ["AI", "CLI", "Wrapper"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-cloudflare",
+      "description": "MCP Server for Cloudflare integration.",
+      "vendor": "cloudflare",
+      "source": { "type": "git", "location": "https://github.com/cloudflare/mcp-server-cloudflare" },
+      "tags": ["Cloud", "Cloudflare", "Infrastructure"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-kubernetes",
+      "description": "MCP Server for Kubernetes management commands.",
+      "vendor": "Flux159",
+      "source": { "type": "git", "location": "https://github.com/Flux159/mcp-server-kubernetes" },
+      "tags": ["Infrastructure", "Kubernetes", "DevOps"],
+      "env": {}
+    },
+    {
+      "name": "mysql-mcp-server",
+      "description": "Secure interaction with MySQL databases.",
+      "vendor": "designcomputer",
+      "source": { "type": "git", "location": "https://github.com/designcomputer/mysql_mcp_server" },
+      "tags": ["Database", "MySQL", "SQL"],
+      "env": {}
+    },
+    {
+      "name": "arxiv-mcp-server",
+      "description": "MCP server for searching and analyzing arXiv papers.",
+      "vendor": "blazickjp",
+      "source": { "type": "git", "location": "https://github.com/blazickjp/arxiv-mcp-server" },
+      "tags": ["Research", "Science", "Papers"],
+      "env": {}
+    },
+    {
+      "name": "yahoo-finance-mcp",
+      "description": "Comprehensive financial data from Yahoo Finance.",
+      "vendor": "Alex2Yang97",
+      "source": { "type": "git", "location": "https://github.com/Alex2Yang97/yahoo-finance-mcp" },
+      "tags": ["Finance", "Data", "Stocks"],
+      "env": {}
+    },
+    {
+      "name": "maverick-mcp",
+      "description": "Personal Stock Analysis MCP Server.",
+      "vendor": "wshobson",
+      "source": { "type": "git", "location": "https://github.com/wshobson/maverick-mcp" },
+      "tags": ["Finance", "Trading", "Analysis"],
+      "env": {}
+    },
+    {
+      "name": "mcp-atlassian",
+      "description": "MCP server for Atlassian tools (Confluence, Jira).",
+      "vendor": "sooperset",
+      "source": { "type": "git", "location": "https://github.com/sooperset/mcp-atlassian" },
+      "tags": ["Productivity", "Jira", "Confluence"],
+      "env": {}
+    },
+    {
+      "name": "mcp-installer",
+      "description": "An MCP server that installs other MCP servers for you.",
+      "vendor": "anaisbetts",
+      "source": { "type": "git", "location": "https://github.com/anaisbetts/mcp-installer" },
+      "tags": ["Utility", "Management", "Installer"],
+      "env": {}
+    },
+    {
+      "name": "mcp-grafana",
+      "description": "MCP server for Grafana.",
+      "vendor": "grafana",
+      "source": { "type": "git", "location": "https://github.com/grafana/mcp-grafana" },
+      "tags": ["Monitoring", "Grafana", "DevOps"],
+      "env": {}
+    },
+    {
+      "name": "shadcn-ui-mcp-server",
+      "description": "Context about shadcn/ui component structure and usage.",
+      "vendor": "Jpisnice",
+      "source": { "type": "git", "location": "https://github.com/Jpisnice/shadcn-ui-mcp-server" },
+      "tags": ["DevTools", "UI", "React"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-browserbase",
+      "description": "Control a browser with Browserbase and Stagehand.",
+      "vendor": "browserbase",
+      "source": { "type": "git", "location": "https://github.com/browserbase/mcp-server-browserbase" },
+      "tags": ["Automation", "Browser", "Testing"],
+      "env": {}
+    },
+    {
+      "name": "exa-mcp-server",
+      "description": "Exa MCP for web search and web crawling.",
+      "vendor": "exa-labs",
+      "source": { "type": "git", "location": "https://github.com/exa-labs/exa-mcp-server" },
+      "tags": ["Search", "Web", "Crawler"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-gemini",
+      "description": "MCP server implementation for Google's Gemini API.",
+      "vendor": "aliargun",
+      "source": { "type": "git", "location": "https://github.com/aliargun/mcp-server-gemini" },
+      "tags": ["AI", "Gemini", "LLM"],
+      "env": {}
+    },
+    {
+      "name": "mindsdb-mcp",
+      "description": "Federated query engine for AI.",
+      "vendor": "mindsdb",
+      "source": { "type": "git", "location": "https://github.com/mindsdb/mindsdb" },
+      "tags": ["Database", "AI", "SQL"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-qdrant",
+      "description": "Official Qdrant Model Context Protocol (MCP) server.",
+      "vendor": "qdrant",
+      "source": { "type": "git", "location": "https://github.com/qdrant/mcp-server-qdrant" },
+      "tags": ["Database", "Vector", "AI"],
+      "env": {}
+    },
+    {
+      "name": "gmail-mcp-server",
+      "description": "MCP server for Gmail integration.",
+      "vendor": "GongRzhe",
+      "source": { "type": "git", "location": "https://github.com/GongRzhe/Gmail-MCP-Server" },
+      "tags": ["Productivity", "Email", "Google"],
+      "env": {}
+    },
+    {
+      "name": "windows-mcp",
+      "description": "MCP Server for Computer Use in Windows.",
+      "vendor": "CursorTouch",
+      "source": { "type": "git", "location": "https://github.com/CursorTouch/Windows-MCP" },
+      "tags": ["OS", "Windows", "Automation"],
+      "env": {}
+    },
+    {
+      "name": "1panel-mcp",
+      "description": "Management for websites, files, containers, and databases on Linux.",
+      "vendor": "1Panel-dev",
+      "source": { "type": "git", "location": "https://github.com/1Panel-dev/1Panel" },
+      "tags": ["DevOps", "Panel", "Linux"],
+      "env": {}
+    },
+    {
+      "name": "dbhub",
+      "description": "Universal database MCP server (MySQL, Postgres, SQLite, etc).",
+      "vendor": "bytebase",
+      "source": { "type": "git", "location": "https://github.com/bytebase/dbhub" },
+      "tags": ["Database", "SQL", "Multi-DB"],
+      "env": {}
+    },
+    {
+      "name": "mongodb-mcp-server",
+      "description": "Official MongoDB MCP server.",
+      "vendor": "mongodb-js",
+      "source": { "type": "git", "location": "https://github.com/mongodb-js/mongodb-mcp-server" },
+      "tags": ["Database", "MongoDB", "NoSQL"],
+      "env": {}
+    },
+    {
+      "name": "mcp-redis",
+      "description": "Official Redis MCP Server.",
+      "vendor": "redis",
+      "source": { "type": "git", "location": "https://github.com/redis/mcp-redis" },
+      "tags": ["Database", "Redis", "Cache"],
+      "env": {}
+    },
+    {
+      "name": "mcp-snowflake-service",
+      "description": "MCP server implementation for Snowflake.",
+      "vendor": "datawiz168",
+      "source": { "type": "git", "location": "https://github.com/datawiz168/mcp-snowflake-service" },
+      "tags": ["Database", "Snowflake", "Warehouse"],
+      "env": {}
+    },
+    {
+      "name": "aws-mcp-server",
+      "description": "Execute AWS CLI commands through MCP.",
+      "vendor": "alexei-led",
+      "source": { "type": "git", "location": "https://github.com/alexei-led/aws-mcp-server" },
+      "tags": ["Cloud", "AWS", "CLI"],
+      "env": {}
+    },
+    {
+      "name": "terraform-mcp-server",
+      "description": "Terraform MCP Server.",
+      "vendor": "hashicorp",
+      "source": { "type": "git", "location": "https://github.com/hashicorp/terraform-mcp-server" },
+      "tags": ["Infrastructure", "Terraform", "IaC"],
+      "env": {}
+    },
+    {
+      "name": "reddit-mcp-buddy",
+      "description": "LLM-optimized Reddit MCP server.",
+      "vendor": "karanb192",
+      "source": { "type": "git", "location": "https://github.com/karanb192/reddit-mcp-buddy" },
+      "tags": ["Social", "Reddit", "Data"],
+      "env": {}
+    },
+    {
+      "name": "weather-mcp-server",
+      "description": "Lightweight weather data MCP server.",
+      "vendor": "ezh0v",
+      "source": { "type": "git", "location": "https://github.com/ezh0v/weather-mcp-server" },
+      "tags": ["Utility", "Weather", "Data"],
+      "env": {}
+    },
+    {
+      "name": "markmap-mcp-server",
+      "description": "Convert Markdown to interactive mind maps.",
+      "vendor": "jinzcdev",
+      "source": { "type": "git", "location": "https://github.com/jinzcdev/markmap-mcp-server" },
+      "tags": ["Utility", "Mindmap", "Visualization"],
+      "env": {}
+    },
+    {
+      "name": "social-scraper-mcp",
+      "description": "Scrape LinkedIn, Facebook, Instagram profiles.",
+      "vendor": "Sharan-Kumar-R",
+      "source": { "type": "git", "location": "https://github.com/Sharan-Kumar-R/Custom-MCP-Server" },
+      "tags": ["Social", "Scraper", "Data"],
+      "env": {}
+    },
+    {
+      "name": "mysql-mcp-server-js",
+      "description": "Read-only access to MySQL databases (JS version).",
+      "vendor": "benborla",
+      "source": { "type": "git", "location": "https://github.com/benborla/mcp-server-mysql" },
+      "tags": ["Database", "MySQL", "JS"],
+      "env": {}
+    },
+    {
+      "name": "clickup-mcp-server",
+      "description": "Integrate ClickUp project management with AI.",
+      "vendor": "taazkareem",
+      "source": { "type": "git", "location": "https://github.com/taazkareem/clickup-mcp-server" },
+      "tags": ["Productivity", "ClickUp", "Project Management"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-monday",
+      "description": "Interact with Monday.com boards and items.",
+      "vendor": "Prat011",
+      "source": { "type": "git", "location": "https://github.com/Prat011/mcp-server-monday" },
+      "tags": ["Productivity", "Monday", "Project Management"],
+      "env": {}
+    },
+    {
+      "name": "brave-search-mcp-server",
+      "description": "Official Brave Search MCP Server.",
+      "vendor": "brave",
+      "source": { "type": "git", "location": "https://github.com/brave/brave-search-mcp-server" },
+      "tags": ["Search", "Brave", "Web"],
+      "env": {}
+    },
+    {
+      "name": "firecrawl-mcp-server",
+      "description": "Official Firecrawl MCP Server for web scraping.",
+      "vendor": "firecrawl",
+      "source": { "type": "git", "location": "https://github.com/firecrawl/firecrawl-mcp-server" },
+      "tags": ["Search", "Scraper", "Crawl"],
+      "env": {}
+    },
+    {
+      "name": "tavily-mcp",
+      "description": "Production ready MCP server with real-time search.",
+      "vendor": "tavily-ai",
+      "source": { "type": "git", "location": "https://github.com/tavily-ai/tavily-mcp" },
+      "tags": ["Search", "Tavily", "Data"],
+      "env": {}
+    },
+    {
+      "name": "google-search-mcp-server",
+      "description": "Google Search MCP Server for VS Code/Cline.",
+      "vendor": "mixelpixx",
+      "source": { "type": "git", "location": "https://github.com/mixelpixx/Google-Search-MCP-Server" },
+      "tags": ["Search", "Google", "Web"],
+      "env": {}
+    },
+    {
+      "name": "mcp-chrome",
+      "description": "Chrome extension-based MCP server.",
+      "vendor": "hangwin",
+      "source": { "type": "git", "location": "https://github.com/hangwin/mcp-chrome" },
+      "tags": ["Browser", "Chrome", "Automation"],
+      "env": {}
+    },
+    {
+      "name": "prometheus-mcp-server",
+      "description": "Query and analyze Prometheus metrics.",
+      "vendor": "pab1it0",
+      "source": { "type": "git", "location": "https://github.com/pab1it0/prometheus-mcp-server" },
+      "tags": ["Monitoring", "Prometheus", "DevOps"],
+      "env": {}
+    },
+    {
+      "name": "antv-mcp-server",
+      "description": "Visualization MCP server.",
+      "vendor": "antvis",
+      "source": { "type": "git", "location": "https://github.com/antvis/antv-mcp-server" },
+      "tags": ["Visualization", "AntV", "Data"],
+      "env": {}
+    },
+    {
+      "name": "slack-mcp-server",
+      "description": "Powerful MCP Slack Server.",
+      "vendor": "korotovsky",
+      "source": { "type": "git", "location": "https://github.com/korotovsky/slack-mcp-server" },
+      "tags": ["Messaging", "Slack", "Communication"],
+      "env": {}
+    },
+    {
+      "name": "bitbucket-mcp",
+      "description": "Bitbucket MCP server for Cloud and Server APIs.",
+      "vendor": "MatanYemini",
+      "source": { "type": "git", "location": "https://github.com/MatanYemini/bitbucket-mcp" },
+      "tags": ["DevOps", "Bitbucket", "Git"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-salesforce",
+      "description": "Salesforce MCP Server.",
+      "vendor": "tsmztech",
+      "source": { "type": "git", "location": "https://github.com/tsmztech/mcp-server-salesforce" },
+      "tags": ["CRM", "Salesforce", "Enterprise"],
+      "env": {}
+    },
+    {
+      "name": "todoist-mcp-server",
+      "description": "Todoist integration for MCP.",
+      "vendor": "abhiz123",
+      "source": { "type": "git", "location": "https://github.com/abhiz123/todoist-mcp-server" },
+      "tags": ["Productivity", "Todoist", "Tasks"],
+      "env": {}
+    },
+    {
+      "name": "linkedin-mcp-server",
+      "description": "Access and scrape LinkedIn profiles.",
+      "vendor": "stickerdaniel",
+      "source": { "type": "git", "location": "https://github.com/stickerdaniel/linkedin-mcp-server" },
+      "tags": ["Social", "LinkedIn", "Scraper"],
+      "env": {}
+    },
+    {
+      "name": "youtube-mcp-server",
+      "description": "MCP Server for YouTube API.",
+      "vendor": "ZubeidHendricks",
+      "source": { "type": "git", "location": "https://github.com/ZubeidHendricks/youtube-mcp-server" },
+      "tags": ["Media", "YouTube", "Video"],
+      "env": {}
+    },
+    {
+      "name": "linear-mcp-server",
+      "description": "Linear project management integration.",
+      "vendor": "jerhadf",
+      "source": { "type": "git", "location": "https://github.com/jerhadf/linear-mcp-server" },
+      "tags": ["Productivity", "Linear", "Projects"],
+      "env": {}
+    },
+    {
+      "name": "deep-research-mcp",
+      "description": "Deep Research with LLMs via MCP.",
+      "vendor": "u14app",
+      "source": { "type": "git", "location": "https://github.com/u14app/deep-research" },
+      "tags": ["AI", "Research", "LLM"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-chart",
+      "description": "Visualization MCP containing 25+ visual charts using AntV.",
+      "vendor": "antvis",
+      "source": { "type": "git", "location": "https://github.com/antvis/mcp-server-chart" },
+      "tags": ["Visualization", "Charts", "Data"],
+      "env": {}
+    },
+    {
+      "name": "dart-mcp-server",
+      "description": "Dart AI Model Context Protocol (MCP) server.",
+      "vendor": "its-dart",
+      "source": { "type": "git", "location": "https://github.com/its-dart/dart-mcp-server" },
+      "tags": ["DevTools", "Dart", "Lang"],
+      "env": {}
+    },
+    {
+      "name": "excel-mcp-server",
+      "description": "MCP server for Excel file manipulation.",
+      "vendor": "haris-musa",
+      "source": { "type": "git", "location": "https://github.com/haris-musa/excel-mcp-server" },
+      "tags": ["Productivity", "Excel", "Data"],
+      "env": {}
+    },
+    {
+      "name": "cli-mcp-server",
+      "description": "Execute CLI commands with security policies.",
+      "vendor": "MladenSU",
+      "source": { "type": "git", "location": "https://github.com/MladenSU/cli-mcp-server" },
+      "tags": ["DevTools", "CLI", "Security"],
+      "env": {}
+    },
+    {
+      "name": "dremio-mcp",
+      "description": "Dremio MCP server for data lakehouse interaction.",
+      "vendor": "dremio",
+      "source": { "type": "git", "location": "https://github.com/dremio/dremio-mcp" },
+      "tags": ["Database", "DataLake", "Dremio"],
+      "env": {}
+    },
+    {
+      "name": "arcade-mcp",
+      "description": "Create, deploy, and share MCP Servers.",
+      "vendor": "ArcadeAI",
+      "source": { "type": "git", "location": "https://github.com/ArcadeAI/arcade-mcp" },
+      "tags": ["DevTools", "Framework", "Arcade"],
+      "env": {}
+    },
+    {
+      "name": "sandbox-mcp",
+      "description": "Run code safely in isolated Docker containers.",
+      "vendor": "pottekkat",
+      "source": { "type": "git", "location": "https://github.com/pottekkat/sandbox-mcp" },
+      "tags": ["DevTools", "Sandbox", "Docker"],
+      "env": {}
+    },
+    {
+      "name": "tasker-mcp",
+      "description": "MCP server for Android Tasker automation app.",
+      "vendor": "dceluis",
+      "source": { "type": "git", "location": "https://github.com/dceluis/tasker-mcp" },
+      "tags": ["Automation", "Android", "Tasker"],
+      "env": {}
+    },
+    {
+      "name": "file-store-mcp",
+      "description": "File store MCP server.",
+      "vendor": "sjzar",
+      "source": { "type": "git", "location": "https://github.com/sjzar/file-store-mcp" },
+      "tags": ["Utility", "Filesystem", "Storage"],
+      "env": {}
+    },
+    {
+      "name": "asgardeo-mcp-server",
+      "description": "Interact with Asgardeo organization through LLM tools.",
+      "vendor": "asgardeo",
+      "source": { "type": "git", "location": "https://github.com/asgardeo/asgardeo-mcp-server" },
+      "tags": ["Identity", "Auth", "Asgardeo"],
+      "env": {}
+    },
+    {
+      "name": "apollo-mcp-server",
+      "description": "Apollo MCP Server for GraphQL.",
+      "vendor": "apollographql",
+      "source": { "type": "git", "location": "https://github.com/apollographql/apollo-mcp-server" },
+      "tags": ["DevTools", "GraphQL", "Apollo"],
+      "env": {}
+    },
+    {
+      "name": "mcp-imagemagick",
+      "description": "MCP server for image conversion using ImageMagick.",
+      "vendor": "AeyeOps",
+      "source": { "type": "git", "location": "https://github.com/AeyeOps/mcp-imagemagick" },
+      "tags": ["Media", "Image", "Processing"],
+      "env": {}
+    },
+    {
+      "name": "outline-mcp-rs",
+      "description": "Outline knowledge base MCP Server.",
+      "vendor": "nizovtsevnv",
+      "source": { "type": "git", "location": "https://github.com/nizovtsevnv/outline-mcp-rs" },
+      "tags": ["Productivity", "KnowledgeBase", "Outline"],
+      "env": {}
+    },
+    {
+      "name": "rustdoc-mcp",
+      "description": "MCP server for searching rustdocs.",
+      "vendor": "jbr",
+      "source": { "type": "git", "location": "https://github.com/jbr/rustdoc-mcp" },
+      "tags": ["DevTools", "Rust", "Docs"],
+      "env": {}
+    },
+    {
+      "name": "ultrafast-mcp-sequential-thinking",
+      "description": "Rust-based MCP server for sequential thinking.",
+      "vendor": "techgopal",
+      "source": { "type": "git", "location": "https://github.com/techgopal/ultrafast-mcp-sequential-thinking" },
+      "tags": ["AI", "Reasoning", "Rust"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-elasticsearch",
+      "description": "Elasticsearch MCP server.",
+      "vendor": "elastic",
+      "source": { "type": "git", "location": "https://github.com/elastic/mcp-server-elasticsearch" },
+      "tags": ["Database", "Elasticsearch", "Search"],
+      "env": {}
+    },
+    {
+      "name": "hass-mcp",
+      "description": "Home Assistant MCP Server (Python).",
+      "vendor": "voska",
+      "source": { "type": "git", "location": "https://github.com/voska/hass-mcp" },
+      "tags": ["IoT", "HomeAssistant", "Automation"],
+      "env": {}
+    },
+    {
+      "name": "homeassistant-mcp",
+      "description": "Home Assistant MCP Server (TypeScript).",
+      "vendor": "tevonsb",
+      "source": { "type": "git", "location": "https://github.com/tevonsb/homeassistant-mcp" },
+      "tags": ["IoT", "HomeAssistant", "SmartHome"],
+      "env": {}
+    },
+    {
+      "name": "home-assistant-vibecode-agent",
+      "description": "Home Assistant MCP server agent for Vibe Coding.",
+      "vendor": "Coolver",
+      "source": { "type": "git", "location": "https://github.com/Coolver/home-assistant-vibecode-agent" },
+      "tags": ["IoT", "HomeAssistant", "Agent"],
+      "env": {}
+    },
+    {
+      "name": "genai-toolbox",
+      "description": "MCP Toolbox for Databases (Google).",
+      "vendor": "googleapis",
+      "source": { "type": "git", "location": "https://github.com/googleapis/genai-toolbox" },
+      "tags": ["Database", "Google", "LLM"],
+      "env": {}
+    },
+    {
+      "name": "Office-PowerPoint-MCP-Server",
+      "description": "MCP server for PowerPoint manipulation.",
+      "vendor": "GongRzhe",
+      "source": { "type": "git", "location": "https://github.com/GongRzhe/Office-PowerPoint-MCP-Server" },
+      "tags": ["Productivity", "Office", "PowerPoint"],
+      "env": {}
+    },
+    {
+      "name": "duckduckgo-mcp-server",
+      "description": "DuckDuckGo MCP server for web search.",
+      "vendor": "nickclyde",
+      "source": { "type": "git", "location": "https://github.com/nickclyde/duckduckgo-mcp-server" },
+      "tags": ["Search", "DuckDuckGo", "Privacy"],
+      "env": {}
+    },
+    {
+      "name": "volcengine-mcp-server",
+      "description": "Volcengine MCP Servers.",
+      "vendor": "volcengine",
+      "source": { "type": "git", "location": "https://github.com/volcengine/mcp-server" },
+      "tags": ["Cloud", "Volcengine", "China"],
+      "env": {}
+    },
+    {
+      "name": "jupyter-mcp-server",
+      "description": "MCP Server for Jupyter notebooks.",
+      "vendor": "datalayer",
+      "source": { "type": "git", "location": "https://github.com/datalayer/jupyter-mcp-server" },
+      "tags": ["DevTools", "DataScience", "Jupyter"],
+      "env": {}
+    },
+    {
+      "name": "kubectl-mcp-server",
+      "description": "Chat with your Kubernetes Cluster using AI.",
+      "vendor": "rohitg00",
+      "source": { "type": "git", "location": "https://github.com/rohitg00/kubectl-mcp-server" },
+      "tags": ["DevOps", "Kubernetes", "K8s"],
+      "env": {}
+    },
+    {
+      "name": "Outlook_Calendar_MCP",
+      "description": "Interact with local Microsoft Outlook calendar.",
+      "vendor": "merajmehrabi",
+      "source": { "type": "git", "location": "https://github.com/merajmehrabi/Outlook_Calendar_MCP" },
+      "tags": ["Productivity", "Outlook", "Calendar"],
+      "env": {}
+    },
+    {
+      "name": "google_workspace_mcp",
+      "description": "Comprehensive Google Workspace / G Suite MCP Server.",
+      "vendor": "taylorwilsdon",
+      "source": { "type": "git", "location": "https://github.com/taylorwilsdon/google_workspace_mcp" },
+      "tags": ["Productivity", "Google", "GSuite"],
+      "env": {}
+    },
+    {
+      "name": "mcp-gsuite",
+      "description": "MCP Server to interact with Google Gsuite products.",
+      "vendor": "MarkusPfundstein",
+      "source": { "type": "git", "location": "https://github.com/MarkusPfundstein/mcp-gsuite" },
+      "tags": ["Productivity", "Google", "GSuite"],
+      "env": {}
+    },
+    {
+      "name": "puppeteer-mcp-server",
+      "description": "Browser automation capabilities through Puppeteer.",
+      "vendor": "merajmehrabi",
+      "source": { "type": "git", "location": "https://github.com/merajmehrabi/puppeteer-mcp-server" },
+      "tags": ["Browser", "Puppeteer", "Automation"],
+      "env": {}
+    },
+    {
+      "name": "browser-use-mcp-server",
+      "description": "Browse the web directly from Cursor.",
+      "vendor": "kontext-dev",
+      "source": { "type": "git", "location": "https://github.com/kontext-dev/browser-use-mcp-server" },
+      "tags": ["Browser", "Web", "Automation"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-rag-web-browser",
+      "description": "MCP Server for the RAG Web Browser Actor.",
+      "vendor": "apify",
+      "source": { "type": "git", "location": "https://github.com/apify/mcp-server-rag-web-browser" },
+      "tags": ["Browser", "Apify", "RAG"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-llamacloud",
+      "description": "Connect to managed indexes on LlamaCloud.",
+      "vendor": "run-llama",
+      "source": { "type": "git", "location": "https://github.com/run-llama/mcp-server-llamacloud" },
+      "tags": ["AI", "LlamaIndex", "Cloud"],
+      "env": {}
+    },
+    {
+      "name": "huggingface-mcp-server",
+      "description": "MCP server for Hugging Face.",
+      "vendor": "shreyaskarnik",
+      "source": { "type": "git", "location": "https://github.com/shreyaskarnik/huggingface-mcp-server" },
+      "tags": ["AI", "HuggingFace", "Models"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-mysql",
+      "description": "Read-only access to MySQL databases.",
+      "vendor": "benborla",
+      "source": { "type": "git", "location": "https://github.com/benborla/mcp-server-mysql" },
+      "tags": ["Database", "MySQL", "SQL"],
+      "env": {}
+    },
+    {
+      "name": "mysql-mcp-server-sse",
+      "description": "MySQL query server based on MCP SSE.",
+      "vendor": "mangooer",
+      "source": { "type": "git", "location": "https://github.com/mangooer/mysql-mcp-server-sse" },
+      "tags": ["Database", "MySQL", "SSE"],
+      "env": {}
+    },
+    {
+      "name": "mcp-obsidian",
+      "description": "Interact with Obsidian via REST API.",
+      "vendor": "MarkusPfundstein",
+      "source": { "type": "git", "location": "https://github.com/MarkusPfundstein/mcp-obsidian" },
+      "tags": ["Productivity", "Obsidian", "Notes"],
+      "env": {}
+    },
+    {
+      "name": "toolhive",
+      "description": "Deploying MCP servers easy, secure and fun.",
+      "vendor": "stacklok",
+      "source": { "type": "git", "location": "https://github.com/stacklok/toolhive" },
+      "tags": ["DevTools", "Deployment", "K8s"],
+      "env": {}
+    },
+    {
+      "name": "activepieces",
+      "description": "Open source No-code Business Automation with MCP support.",
+      "vendor": "activepieces",
+      "source": { "type": "git", "location": "https://github.com/activepieces/activepieces" },
+      "tags": ["Automation", "NoCode", "Workflow"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-atlassian-bitbucket",
+      "description": "MCP server for Atlassian Bitbucket.",
+      "vendor": "aashari",
+      "source": { "type": "git", "location": "https://github.com/aashari/mcp-server-atlassian-bitbucket" },
+      "tags": ["DevOps", "Bitbucket", "Atlassian"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-wazuh",
+      "description": "MCP Server for Wazuh SIEM.",
+      "vendor": "gbrigandi",
+      "source": { "type": "git", "location": "https://github.com/gbrigandi/mcp-server-wazuh" },
+      "tags": ["Security", "Wazuh", "SIEM"],
+      "env": {}
+    },
+    {
+      "name": "mcpadapt",
+      "description": "Unlock 650+ MCP servers tools in your favorite agentic framework.",
+      "vendor": "grll",
+      "source": { "type": "git", "location": "https://github.com/grll/mcpadapt" },
+      "tags": ["DevTools", "Adapter", "Framework"],
+      "env": {}
+    },
+    {
+      "name": "fastmcp",
+      "description": "The fast, Pythonic way to build MCP servers.",
+      "vendor": "jlowin",
+      "source": { "type": "git", "location": "https://github.com/jlowin/fastmcp" },
+      "tags": ["DevTools", "SDK", "Python"],
+      "env": {}
+    },
+    {
+      "name": "k8s-mcp-server",
+      "description": "MCP server to securely execute Kubernetes commands.",
+      "vendor": "alexei-led",
+      "source": { "type": "git", "location": "https://github.com/alexei-led/k8s-mcp-server" },
+      "tags": ["DevOps", "Kubernetes", "Python"],
+      "env": {}
+    },
+    {
+      "name": "kubernetes-mcp-server",
+      "description": "Official Model Context Protocol (MCP) server for Kubernetes (Red Hat).",
+      "vendor": "containers",
+      "source": { "type": "git", "location": "https://github.com/containers/kubernetes-mcp-server" },
+      "tags": ["DevOps", "Kubernetes", "Official"],
+      "env": {}
+    },
+    {
+      "name": "inspector",
+      "description": "Visual testing tool for MCP servers.",
+      "vendor": "modelcontextprotocol",
+      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/inspector" },
+      "tags": ["DevTools", "Testing", "Official"],
+      "env": {}
+    },
+    {
+      "name": "playwright-mcp",
+      "description": "Official Microsoft Playwright MCP server.",
+      "vendor": "microsoft",
+      "source": { "type": "git", "location": "https://github.com/microsoft/playwright-mcp" },
+      "tags": ["Browser", "Playwright", "Microsoft"],
+      "env": {}
+    },
+    {
+      "name": "github-mcp-server",
+      "description": "Official GitHub MCP Server.",
+      "vendor": "github",
+      "source": { "type": "git", "location": "https://github.com/github/github-mcp-server" },
+      "tags": ["DevOps", "GitHub", "Official"],
+      "env": {}
+    },
+    {
+      "name": "whatsapp-mcp",
+      "description": "WhatsApp MCP server.",
+      "vendor": "lharries",
+      "source": { "type": "git", "location": "https://github.com/lharries/whatsapp-mcp" },
+      "tags": ["Messaging", "WhatsApp", "Meta"],
+      "env": {}
+    },
+    {
+      "name": "pal-mcp-server",
+      "description": "Unified AI model access (Claude, Gemini, OpenAI) via MCP.",
+      "vendor": "BeehiveInnovations",
+      "source": { "type": "git", "location": "https://github.com/BeehiveInnovations/pal-mcp-server" },
+      "tags": ["AI", "Models", "Wrapper"],
+      "env": {}
+    },
+    {
+      "name": "GhidraMCP",
+      "description": "MCP Server for Ghidra reverse engineering tool.",
+      "vendor": "LaurieWired",
+      "source": { "type": "git", "location": "https://github.com/LaurieWired/GhidraMCP" },
+      "tags": ["Security", "Ghidra", "Reverse Engineering"],
+      "env": {}
+    },
+    {
+      "name": "evm-mcp-server",
+      "description": "Interact with EVM networks via MCP.",
+      "vendor": "mcpdotdirect",
+      "source": { "type": "git", "location": "https://github.com/mcpdotdirect/evm-mcp-server" },
+      "tags": ["Web3", "EVM", "Blockchain"],
+      "env": {}
+    },
+    {
+      "name": "ms-365-mcp-server",
+      "description": "Interact with Microsoft 365 and Graph API.",
+      "vendor": "Softeria",
+      "source": { "type": "git", "location": "https://github.com/Softeria/ms-365-mcp-server" },
+      "tags": ["Productivity", "Microsoft365", "Office"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-airbnb",
+      "description": "Search Airbnb using your AI Agent.",
+      "vendor": "openbnb-org",
+      "source": { "type": "git", "location": "https://github.com/openbnb-org/mcp-server-airbnb" },
+      "tags": ["Search", "Airbnb", "Travel"],
+      "env": {}
+    },
+    {
+      "name": "shadcn-ui-mcp-server",
+      "description": "MCP server for shadcn/ui components context.",
+      "vendor": "Jpisnice",
+      "source": { "type": "git", "location": "https://github.com/Jpisnice/shadcn-ui-mcp-server" },
+      "tags": ["Web", "UI", "React"],
+      "env": {}
+    },
+    {
+      "name": "boost",
+      "description": "Laravel-focused MCP server for local development.",
+      "vendor": "laravel",
+      "source": { "type": "git", "location": "https://github.com/laravel/boost" },
+      "tags": ["DevTools", "Laravel", "PHP"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-mapbox",
+      "description": "Official Mapbox MCP server.",
+      "vendor": "mapbox",
+      "source": { "type": "git", "location": "https://github.com/mapbox/mcp-server" },
+      "tags": ["Maps", "Mapbox", "Location"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-postgres",
+      "description": "Official PostgreSQL MCP server.",
+      "vendor": "modelcontextprotocol",
+      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres" },
+      "tags": ["Database", "PostgreSQL", "Official"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-sqlite",
+      "description": "Official SQLite MCP server.",
+      "vendor": "modelcontextprotocol",
+      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite" },
+      "tags": ["Database", "SQLite", "Official"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-memory",
+      "description": "Official Memory (Graph-based) MCP server.",
+      "vendor": "modelcontextprotocol",
+      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/memory" },
+      "tags": ["AI", "Memory", "Official"],
+      "env": {}
+    },
+    {
+      "name": "mcp-server-google-maps",
+      "description": "Official Google Maps MCP server.",
+      "vendor": "modelcontextprotocol",
+      "source": { "type": "git", "location": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps" },
+      "tags": ["Maps", "Google", "Official"],
+      "env": {}
+    },
+    {
+      "name": "pumpswap-mcp",
+      "description": "Trade on Pump.fun via MCP.",
+      "vendor": "kukapay",
+      "source": { "type": "git", "location": "https://github.com/kukapay/pumpswap-mcp" },
+      "tags": ["Web3", "Solana", "Memecoins", "PumpFun"],
+      "env": {}
+    },
+    {
+      "name": "dexscreener-mcp-server",
+      "description": "Fetch real-time DEX data via DexScreener.",
+      "vendor": "openSVM",
+      "source": { "type": "git", "location": "https://github.com/openSVM/dexscreener-mcp-server" },
+      "tags": ["Web3", "Data", "DEX", "Analytics"],
+      "env": {}
+    },
+    {
+      "name": "uniswap-trader-mcp",
+      "description": "Automate token swaps on Uniswap.",
+      "vendor": "kukapay",
+      "source": { "type": "git", "location": "https://github.com/kukapay/uniswap-trader-mcp" },
+      "tags": ["Web3", "DeFi", "Uniswap", "Trading"],
+      "env": {}
+    },
+    {
+      "name": "uniswap-poolspy-mcp",
+      "description": "Analyze Uniswap liquidity pools.",
+      "vendor": "kukapay",
+      "source": { "type": "git", "location": "https://github.com/kukapay/uniswap-poolspy-mcp" },
+      "tags": ["Web3", "DeFi", "Uniswap", "Analytics"],
+      "env": {}
+    },
+    {
+      "name": "crypto-indicators-mcp",
+      "description": "Technical analysis indicators (RSI, MACD, etc.) for crypto.",
+      "vendor": "kukapay",
+      "source": { "type": "git", "location": "https://github.com/kukapay/crypto-indicators-mcp" },
+      "tags": ["Trading", "TechnicalAnalysis", "Indicators"],
+      "env": {}
+    },
+    {
+      "name": "solana-mcp",
+      "description": "Interact with Solana blockchain.",
+      "vendor": "tony-42069",
+      "source": { "type": "git", "location": "https://github.com/tony-42069/solana-mcp" },
+      "tags": ["Web3", "Solana", "Chain-RPC"],
+      "env": {}
+    },
+    {
+      "name": "clarity-mcp-server",
+      "description": "Microsoft Clarity analytics integration.",
+      "vendor": "microsoft",
+      "source": { "type": "git", "location": "https://github.com/microsoft/clarity-mcp-server" },
+      "tags": ["Analytics", "Web", "Microsoft"],
       "env": {}
     }
   ]
