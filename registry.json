@@ -2164,6 +2164,102 @@
       "source": { "type": "git", "location": "https://github.com/microsoft/clarity-mcp-server" },
       "tags": ["Analytics", "Web", "Microsoft"],
       "env": {}
+    },
+    {
+      "name": "alchemy-mcp-server",
+      "description": "Official Alchemy MCP server for blockchain APIs.",
+      "vendor": "Alchemy",
+      "source": { "type": "git", "location": "https://github.com/alchemyplatform/alchemy-mcp-server" },
+      "tags": ["Web3", "Infrastructure", "Alchemy", "RPC"],
+      "env": { "ALCHEMY_API_KEY": { "description": "Alchemy API Key" } }
+    },
+    {
+      "name": "infura-mcp-server",
+      "description": "Infura Ethereum JSON-RPC API wrapper.",
+      "vendor": "Qbandev",
+      "source": { "type": "git", "location": "https://github.com/Qbandev/infura-mcp-server" },
+      "tags": ["Web3", "Infrastructure", "Infura", "RPC"],
+      "env": { "INFURA_PROJECT_ID": { "description": "Infura Project ID" } }
+    },
+    {
+      "name": "blockchain-mcp",
+      "description": "Perform blockchain operations using Thirdweb SDK.",
+      "vendor": "joaquim-verges",
+      "source": { "type": "git", "location": "https://github.com/joaquim-verges/blockchain-mcp" },
+      "tags": ["Web3", "Thirdweb", "Wallets"],
+      "env": {}
+    },
+    {
+      "name": "aave-mcp",
+      "description": "Track real-time lending markets on Aave.",
+      "vendor": "kukapay",
+      "source": { "type": "git", "location": "https://github.com/kukapay/aave-mcp" },
+      "tags": ["Web3", "DeFi", "Aave", "Lending"],
+      "env": {}
+    },
+    {
+      "name": "defi-rates-mcp",
+      "description": "Real-time lending rates across 13+ protocols (Aave, Compound, Morpho).",
+      "vendor": "qingfeng",
+      "source": { "type": "git", "location": "https://github.com/qingfeng/defi-rates-mcp" },
+      "tags": ["Web3", "DeFi", "Rates", "Analytics"],
+      "env": {}
+    },
+    {
+      "name": "opensearch-mcp-server",
+      "description": "Official OpenSearch MCP server.",
+      "vendor": "OpenSearch Project",
+      "source": { "type": "git", "location": "https://github.com/opensearch-project/opensearch-mcp-server-py" },
+      "tags": ["Analytics", "Search", "Database", "OpenSearch"],
+      "env": {}
+    },
+    {
+      "name": "terminal-server",
+      "description": "Execute terminal commands safely via MCP.",
+      "vendor": "theailanguage",
+      "source": { "type": "git", "location": "https://github.com/theailanguage/terminal_server" },
+      "tags": ["Automation", "CLI", "Terminal", "HiddenGem"],
+      "env": {}
+    },
+    {
+      "name": "alpaca-mcp-server",
+      "description": "Official Alpaca MCP server for stock/crypto trading and data.",
+      "vendor": "Alpaca",
+      "source": { "type": "git", "location": "https://github.com/alpacahq/alpaca-mcp-server" },
+      "tags": ["Finance", "Trading", "Stocks", "Crypto", "Official"],
+      "env": { "APCA_API_KEY_ID": { "description": "Alpaca API Key ID" }, "APCA_API_SECRET_KEY": { "description": "Alpaca Secret Key" } }
+    },
+    {
+      "name": "alpha-vantage-mcp",
+      "description": "Financial market data API (Stocks, Forex, Crypto).",
+      "vendor": "alphavantage",
+      "source": { "type": "git", "location": "https://github.com/alphavantage/alpha_vantage_mcp" },
+      "tags": ["Finance", "Data", "Stocks", "Forex"],
+      "env": { "ALPHA_VANTAGE_API_KEY": { "description": "Alpha Vantage API Key" } }
+    },
+    {
+      "name": "heimdall-mcp-server",
+      "description": "Long-term memory for AI coding assistants.",
+      "vendor": "lcbcFoo",
+      "source": { "type": "git", "location": "https://github.com/lcbcFoo/heimdall-mcp-server" },
+      "tags": ["AI", "Memory", "Agents", "Coding"],
+      "env": {}
+    },
+    {
+      "name": "needle-mcp",
+      "description": "RAG and long-term memory for LLMs.",
+      "vendor": "needle-ai",
+      "source": { "type": "git", "location": "https://github.com/needle-ai/needle-mcp" },
+      "tags": ["AI", "Memory", "RAG"],
+      "env": { "NEEDLE_API_KEY": { "description": "Needle API Key" } }
+    },
+    {
+      "name": "finance-trading-ai-agents-mcp",
+      "description": "Department-based AI agents for financial analysis and trading.",
+      "vendor": "aitrados",
+      "source": { "type": "git", "location": "https://github.com/aitrados/finance-trading-ai-agents-mcp" },
+      "tags": ["Finance", "Trading", "Agents", "Autonomous"],
+      "env": {}
     }
   ]
 }
